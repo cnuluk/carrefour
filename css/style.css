@@ -1,0 +1,379 @@
+*{
+  font-family: 'Noto Serif TC', serif;
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  border: 0;
+}
+
+header{
+  background-image: url(../img/header-bg.png);
+  background-size: cover;
+  width: 100%;
+  position: fixed;
+  color: #fff;
+  height: 70px;
+  line-height: 35px;
+  top: 0;
+  left: 0;
+  z-index: 7;
+}
+
+.logo{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  line-height: 0;
+}
+
+.nav-btn{
+  display: none;
+}
+
+.a-group{
+  position: absolute;
+  padding: 10px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.a-group a{
+  font-size: 20px;
+  font-weight: 700; 
+  color: #483729;
+  text-decoration: none;
+}
+
+.a-group a + a:before{
+  content: '/';
+  margin: 0 15px;
+  color: #483729;
+} 
+
+.banner{
+  margin: 0;
+  padding: 0;
+  margin-top: 70px;
+  height: auto;
+  position: relative;
+}
+
+.banner img{
+  height: auto;
+  width: 100%;
+}
+
+.text-area{
+  color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  letter-spacing: 5px;
+  line-height: 65px;
+}
+
+.text-area p{
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.text-area p:before{
+  background: #fff;
+  content:'';
+  width: 40px;
+  height: 1px;
+  display: inline-block;
+  margin: 5px 20px;
+}
+
+.text-area p::after{
+  background: #fff;
+  content:'';
+  width: 40px;
+  height: 1px;
+  display: inline-block;
+  margin: 5px 20px;
+}
+
+.text-area h2{
+  text-align: center;
+  font-size: 55px;
+}
+
+.white-bg{
+  background-image: url(../img/qa-bg.png);
+  color: #000;
+  background-size: center;
+  width: auto;
+  max-height: auto;
+  position: relative;
+  top: -5px;
+}
+
+
+.qa-group-area{
+  color: #000;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 4.16667vw 0;
+}
+
+.qa-title{
+  padding: 40px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.qa-title h2{
+  font-size: 35px;
+}
+
+.question{
+  padding: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-top: solid 1px #c9caca;
+  cursor: pointer;
+  position: relative;
+}
+
+.question h2 , .answer p{
+  margin: 0 30px 0 65px;
+}
+
+.question::before , .question::after{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+}
+
+.question::before{
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #c30d23;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 15px;
+  top: 50%;
+}
+
+.question h2::before{
+  content:'Q.';
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  left: 35px;
+  top: 18px;
+}
+
+.question::after{
+  height: 12px;
+  width: 12px;
+  border: 1px solid #000;
+  border-width: 1px 1px 0 0;
+  transform: translateY(-50%) rotate(135deg);
+  right: 25px;
+  top: 50%px;
+  transition-duration: 0.3s;
+}
+
+.question.active::after{
+  transform: translateY(-50%) rotate(-45deg);
+} 
+
+.answer{
+  padding: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-top: 1px solid #c9caca;
+  background-color: rgba(218, 218, 218,0.4);
+  display: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.answer p{
+  color: black;
+  display: block;
+  font-size: 18px;
+}
+
+
+.answer::before{
+  content: 'A.';
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  left: 35px;
+}
+
+.card.issue .question{
+  border-bottom: 1px solid #c9caca;
+} 
+
+.card.issue .answer{
+  border-bottom: 1px solid #c9caca;
+  border-top: 0;
+} 
+
+.footer{
+  background-color: black;
+  width: 100%;
+  color: #c7c7c7;
+  padding: 0 2%;
+  height: 30px;
+  position: relative;
+  z-index: 5;
+}
+
+.container{
+  line-height: 30px;
+}
+
+.social-group{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.social-group li{
+  display: inline-block;
+}
+
+ul{
+  list-style: none;
+}
+
+.social-group img{
+  height: 15px;
+  width: auto;
+}
+
+.social-group li + li::before{
+  content: "|";
+  margin: 15px;
+}
+.pc{
+  display: block;
+}
+.mobile{
+  display: none;
+}
+
+@media(max-width: 768px){
+  header{
+    height: 90px;
+  }
+  .logo{
+    max-width: 100%;
+  }
+
+  .logo img{
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-btn{
+    display: inline-block;
+    width: 6%;
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    cursor: pointer;
+  }
+
+  .nav-btn img{
+    width: 100%;
+    height: auto;
+  }
+
+  .a-group.active{
+    transform: translateX(100%);
+    transition-duration: 0.5s;
+  }
+
+  .a-group{
+    transform: translateX(0);
+    transition-duration: 0.5s;
+  }
+
+  .a-group{
+    /* display: none; */
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    height: 100vh;
+    transform: translateY(0);
+    background: url(https://carrefour.friendo.com.tw/2019soriyanagi/images/m-bg.jpg);
+    background-size: cover;
+    padding: 20px;
+  }
+  .a-group a{
+    display: block;
+    color: #fff;
+    position: relative;
+  }
+  .a-group a + a:before{
+    content: none;
+  }
+  .a-group a + a:before{
+    content: '';
+    width: 60%;
+    height: 2px;
+    border-top: solid 2px;
+    border-bottom: 0;
+    display: block;
+    margin: 12px;
+    background-color: #E1C26F;
+  }
+
+  .a-group span{
+    padding-left: 30px;
+    font-size: 28px;
+  }
+  .a-group span:before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(https://carrefour.friendo.com.tw/2019soriyanagi/images/l-icon.png);
+    background-size: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  } 
+  .a-group +:before{
+    content: '';
+    width: 60%;
+    height: 1px;
+    border-top: 1px solid;
+    border-bottom: 0;  
+  }
+  .qa-group-area{
+    width: 85%;
+  }
+  .social-group{
+    display: none;
+  }
+  .container{
+    text-align: center;
+  }
+  .pc{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+}
